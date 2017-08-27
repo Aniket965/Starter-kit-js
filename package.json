@@ -2,7 +2,10 @@
   "name": "starter-kit-ks",
   "version": "1.0.0",
   "description": "JavaScript stater kit for me",
-  "scripts": {},
+  "scripts": {
+    "prestart": "node buildScripts\\StartMessage.js",
+    "start": "node buildScripts\\srcServer.js"
+  },
   "author": "Aniket965",
   "license": "MIT",
   "dependencies": {
@@ -15,7 +18,7 @@
     "babel-preset-latest": "6.16.0",
     "babel-register": "6.16.3",
     "chai": "3.5.0",
-    "chalk": "1.1.3",
+    "chalk": "^1.1.3",
     "cheerio": "0.22.0",
     "compression": "1.6.2",
     "cross-env": "3.1.3",
