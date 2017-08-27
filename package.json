@@ -4,7 +4,11 @@
   "description": "JavaScript stater kit for me",
   "scripts": {
     "prestart": "node buildScripts\\StartMessage.js",
-    "start": "node buildScripts\\srcServer.js"
+    "start": "npm-run-all --parallel security-check open:src",
+    "open:src" :"node buildScripts\\srcServer.js",
+    "security-check":"nsp check",
+    "localtunnel":"lt --port 4000",
+    "share":"npm-run-all --parallel start localtunnel"
   },
   "author": "Aniket965",
   "license": "MIT",
